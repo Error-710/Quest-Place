@@ -1,0 +1,17 @@
+const Sequelize = require('sequelize');
+const conection = require('./database');
+
+const respostas = conection.define('respostas', {
+    corpo: { 
+        type: Sequelize.TEXT,
+        allowNull: false
+    },
+    idPergunta: {
+        type: Sequelize.STRING,
+        allowNull: false
+    }
+})
+
+module.exports = respostas
+
+respostas.sync({force: false});

@@ -1,0 +1,48 @@
+<%- include ('partials/header') %>
+<body>
+    <%- include ('partials/nav') %>
+    <div class="container">
+        <h2>Pergunta</h2>
+        <hr>
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="card" id="cartao">
+
+                <div class="card-header">
+
+                    <h2><%= pergunta.titulo %></h2>
+
+                </div>
+                <div class="card-body">
+
+                    <p><%= pergunta.descricao %></p>
+                    
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h3>Responder:</h3>
+        <form method="POST" action="/armazenarResposta">
+            <div class="mb-3">
+                <label class="form-label">sua resposta:</label>
+                <textarea class="form-control" name="corpo" rows="1" required width="60%"></textarea>
+                <input type="hidden" value ="<%= pergunta.id %>" name="idPergunta">
+
+            </div>
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+        <hr>
+        <div class="container mt-5 ">
+            <h3>respostas</h3>
+            <% resposta.forEach( (resposta) =>{ %>
+                <div class="card" id = 'cartao' style="margin-bottom: 5px;">
+                    <div class="card-header"> <h5>Anônimo</h5></div>
+                    <div class="card-body"> <%= resposta.corpo %> </div>
+                </div>
+            <% }) %>
+            
+        </div>
+
+        
+    </div>
+</body>
+<%- include ('partials/footer') %>
