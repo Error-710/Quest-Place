@@ -50,7 +50,7 @@ app.get('/respostas/:id', (req, res) => {
                 idPergunta: pergunta.id
                 },
                 order: [['id', 'DESC']]
-            }).then( respostas => {
+            }).then( respostasLista => {
                 res.render('respostas', {
                 pergunta: pergunta,
                 resposta: respostasLista
