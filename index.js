@@ -53,7 +53,7 @@ app.get('/respostas/:id', (req, res) => {
             }).then( respostas => {
                 res.render('respostas', {
                 pergunta: pergunta,
-                resposta: respostas
+                resposta: respostasLista
             });
             })
 
