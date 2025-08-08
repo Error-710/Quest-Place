@@ -92,4 +92,5 @@ app.post('/armazenarResposta' , async(req, res) => {
 })
 
 
-app.listen(2121);
+const PORT = process.env.PORT || 2121;
+app.listen(PORT);
