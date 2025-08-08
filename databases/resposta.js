@@ -14,4 +14,4 @@ const respostas = conection.define('respostas', {
 
 module.exports = respostas
 
-respostas.sync({force: false});
+respostas.sync({force: true});
