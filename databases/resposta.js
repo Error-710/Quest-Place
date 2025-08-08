@@ -7,7 +7,7 @@ const respostas = conection.define('respostas', {
         allowNull: false
     },
     idPergunta: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false
     }
 })
