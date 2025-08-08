@@ -33,10 +33,10 @@
         <hr>
         <div class="container mt-5 ">
             <h3>respostas</h3>
-            <% resposta.forEach( (resposta) =>{ %>
+            <% respostasLista.forEach( (resposta) =>{ %>
                 <div class="card" id = 'cartao' style="margin-bottom: 5px;">
                     <div class="card-header"> <h5>Anônimo</h5></div>
-                    <div class="card-body"> <%= resposta.corpo %> </div>
+                    <div class="card-body"> <%= respostasLista.corpo %> </div>
                 </div>
             <% }) %>
             
